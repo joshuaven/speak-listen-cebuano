@@ -1,6 +1,15 @@
+<!DOCTYPE html>
 <html>
+  <head>
+    <title>Speak & Listen Cebuano</title>
+  </head>
   <body>
     <h1>Speak and Listen ~Cebuano Language Voice Database~</h1>
+
+    <h2>Read this sentence: </h2>
+    <div id="lineDisplay"></div>
+    <button onclick="newSentence()">Skip</button>
+
     <p>Press Start Recording to start recording your voice!</p>
     <button id="download">Download</button>
     <button id="record">Start Recording</button>
@@ -8,5 +17,6 @@
     <audio id="audio" controls></audio>
 
     <script src="./scripts/recorder.js"></script>
+    <script src="./scripts/sentence.js"></script>
   </body>
 </html>
