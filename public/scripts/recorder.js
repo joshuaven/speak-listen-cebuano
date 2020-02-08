@@ -1,29 +1,55 @@
 // buttons and their status
 let shouldStop = false;
 let stopped = false;
-const downloadButton = document.getElementById("download");
 const stopButton = document.getElementById("stop");
 const recordButton = document.getElementById("record");
 const audioRecord = document.getElementById("audio");
+const submitButton = document.getElementById("submit");
 recordButton.disabled = true;
 stopButton.disabled = true;
 downloadButton.disabled = true;
+submitButton.disabled = true;
 
 // audio data
 let blob;
 let URL;
 
-downloadButton.addEventListener("click", () => {
-  const a = document.createElement("a");
-  a.style.display = "none";
-  a.href = url;
-  a.download = "test.webm";
-  document.body.appendChild(a);
-  a.click();
-  // setTimeout(() => {
-  //   document.body.removeChild("a");
-  //   window.URL.revokeObjectURL(url);
-  // }, 100);
+//form submission
+let p5Mods;
+
+//audio title
+let lineNumber;
+let date = Date.now();
+
+submitButton.addEventListener("click", () => {
+  lineNumber = document.getElementById("lineNumber").innerHTML;
+  let title = lineNumber + "-" + date;
+  console.log(title);
+
+  let formdata = new FormData();
+  formdata.append("soundBlob", blob, title + ".wav");
+  console.log(formdata);
+
+  var serverURL = "/upload";
+
+  var httpRequestOption = {
+    method: "POST",
+    body: formdata,
+    headers: new Headers({
+      enctype: "multipart/form-data"
+    })
+  };
+
+  p5Mods = new p5.prototype.httpDo(
+    serverURL,
+    httpRequestOption,
+    successStatusCode => {
+      console.log("Uploaded recording successfully: " + successStatusCode);
+    },
+    error => {
+      console.log(error);
+    }
+  );
 });
 
 stopButton.addEventListener("click", function() {
@@ -85,9 +111,11 @@ function stopRecording() {
 
   stopButton.disabled = true;
   downloadButton.disabled = false;
+  submitButton.disabled = false;
 }
 
 const handleSuccess = function(stream) {
+  newSentence();
   recordButton.disabled = false;
   window.stream = stream;
   console.log("getUserMedia() got stream", stream);

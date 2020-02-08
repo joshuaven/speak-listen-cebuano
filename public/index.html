@@ -6,16 +6,20 @@
   <body>
     <h1>Speak and Listen ~Cebuano Language Voice Database~</h1>
 
-    <h2>Read this sentence: </h2>
-    <div id="lineDisplay"></div>
+    <h2>Read this sentence:</h2>
+    <div>
+      <p id="lineNumber" hidden></p>
+      <p id="lineDisplay"></p>
+    </div>
     <button onclick="newSentence()">Skip</button>
 
     <p>Press Start Recording to start recording your voice!</p>
-    <button id="download">Download</button>
     <button id="record">Start Recording</button>
     <button id="stop">Stop</button>
     <audio id="audio" controls></audio>
+    <button id="submit">Submit</button>
 
+    <script src="./scripts/p5.min.js"></script>
     <script src="./scripts/recorder.js"></script>
     <script src="./scripts/sentence.js"></script>
   </body>
