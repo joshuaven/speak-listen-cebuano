@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      .phrases {
+        height: 10em;
+        position: relative }
+      .phrases {
+        margin: 0;
+        background-position: 100px;
+        position: absolute;
+        top: 70%;
+        left: 50%;
+        margin-right: -50%;
+        transform: translate(-50%, -50%);
+        font-size: 40px; }
+      .button{
+        height:20px; 
+        width:100px; 
+        margin: -20px -50px; 
+        position:relative;
+        top:50%; 
+        left:50%;
+        font-weight: bolder;
+      }
+      .audio {
+        margin: 0;
+        background-position: 100px;
+        position: absolute;
+        top: 80%;
+        left: 65%;
+        margin-right: -50%;
+        transform: translate(-50%, -50%);
+      }
+      .controls {
+        margin: 0;
+        background-position: 100px;
+        position: absolute;
+        top: 80%;
+        left: 35%;
+        margin-right: -50%;
+        transform: translate(-50%, -50%);
+      }
+      .read {
+        margin: 0;
+        background-position: 100px;
+        position: absolute;
+        top: 20%;
+        left: 30%;
+        margin-right: -50%;
+        transform: translate(-50%, -50%);
+      }
+  
+    </style>  
+
+    <title>Listen Cebuano</title>
+  </head>
+  <body onload="newSentence()">
+    <div class="read">
+      <h2>Press play to validate recording!</h2>
+    </div>
+    <div class="phrases">
+      <p id="lineNumber" hidden></p>
+      <p id="lineDisplay"></p>
+      <p id="english" style="font-size: 20px;"></p>
+    </div>
+
+    <div class="controls">
+      <button id=yes>Yes</button>
+      <button id=play>Play</button>
+      <!-- <audio class="audio" id="audio" controls></audio> -->
+      <button id=no>No</button>
+    </div>
+    
+
+    <script src="./scripts/sentence.js"></script>
+  </body>
+</html>
