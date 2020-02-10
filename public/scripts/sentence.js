@@ -1,5 +1,5 @@
 var sentences = [
-  "Maka-istorya ba ka ug English?",
+  "Maka-istorya ba ka og English?",
   "Asa dapit ang Ayala dire?",
   "Unsa ang jeep sakyan padung sa pier?",
   "Maayong buntag! Kumusta man ka?",
@@ -10,6 +10,7 @@ var sentences = [
   "Palihug hinay-hinaya pagsulti",
   "Mangaon ta ninyo!"
 ];
+
 
 function newSentence() {
   var randomNumber = Math.floor(Math.random() * sentences.length);

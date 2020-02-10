@@ -7,7 +7,6 @@ const audioRecord = document.getElementById("audio");
 const submitButton = document.getElementById("submit");
 recordButton.disabled = true;
 stopButton.disabled = true;
-downloadButton.disabled = true;
 submitButton.disabled = true;
 
 // audio data
@@ -110,7 +109,6 @@ function stopRecording() {
   url = window.URL.createObjectURL(blob);
 
   stopButton.disabled = true;
-  downloadButton.disabled = false;
   submitButton.disabled = false;
 }
 
