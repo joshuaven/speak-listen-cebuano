@@ -28,7 +28,9 @@ data = new Promise((resolve, reject) => {
     player.src = "uploads/" + parsedData[track];
     let sentenceNumber = parseInt(parsedData[track].slice(0, 1));
     sentence = sentenceNumber;
-    // displaySentence(sentenceNumber);
+    console.log(player.src);
+
+    displaySentence(sentenceNumber);
 
     nextButton.addEventListener("click", () => {
       if (track < parsedData.length - 1) {

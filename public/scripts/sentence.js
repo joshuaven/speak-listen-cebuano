@@ -13,6 +13,7 @@ var sentences = [
 
 function displaySentence(lineNumber) {
   document.getElementById("lineDisplay").innerHTML = sentences[lineNumber];
+  document.getElementById("english").innerHTML = english[lineNumber];
   console.log(sentences[lineNumber]);
 }
 var english = [
