@@ -11,6 +11,10 @@ var sentences = [
   "Mangaon ta ninyo!"
 ];
 
+function displaySentence(lineNumber) {
+  document.getElementById("lineDisplay").innerHTML = sentences[lineNumber];
+  console.log(sentences[lineNumber]);
+}
 
 function newSentence() {
   var randomNumber = Math.floor(Math.random() * sentences.length);

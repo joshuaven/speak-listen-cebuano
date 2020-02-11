@@ -23,7 +23,6 @@ let date = Date.now();
 submitButton.addEventListener("click", () => {
   lineNumber = document.getElementById("lineNumber").innerHTML;
   let title = lineNumber + "-" + date;
-  console.log(title);
 
   let formdata = new FormData();
   formdata.append("soundBlob", blob, title + ".wav");
@@ -49,6 +48,7 @@ submitButton.addEventListener("click", () => {
       console.log(error);
     }
   );
+  submitButton.disabled = true;
 });
 
 stopButton.addEventListener("click", function() {
