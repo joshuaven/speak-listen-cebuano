@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+</html>
+  <script src="scripts/sentence.js"></script>
+  <script src="scripts/p5.min.js"></script>
+  <script src="scripts/fileFetch.js"></script>
+  <head>
+    <style>
+      .body {
+        /* height: "100%";
+        width: "100%"; */
+        /* flex-direction: row-reverse;
+        background-color: aquamarine; */
+        text-align: center;
+      }
+      /* .phrases {
+        height: 10em;
+        position: relative } */
+      .phrases {
+      }
+      /* .button{
+        height:20px;
+        width:100px;
+        margin: -20px -50px;
+        position:relative;
+        top:50%;
+        left:50%;
+        font-weight: bolder;
+      }
+      .audio {
+        margin: 0;
+        background-position: 100px;
+        position: absolute;
+        top: 80%;
+        left: 65%;
+        margin-right: -50%;
+        transform: translate(-50%, -50%);
+      }
+      .controls {
+        margin: 0;
+        background-position: 100px;
+        position: absolute;
+        top: 80%;
+        left: 35%;
+        margin-right: -50%;
+        transform: translate(-50%, -50%);
+      } */ */
+      .read {
+        background-color: rgb(67, 131, 51);
+        text-align: center;
+      }
+
+      #h2Text {
+        font-size: 30px;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+      }
+
+    </style>
+
+    <title>Listen Cebuano</title>
+  </head>
+  <body class="body">
+    <div class="read">
+      <h2 id="h2Text">Click (play button) did they accurately speak the sentence?</h2>
+    </div>
+
+    <div class="phrases">
+      <p id="lineNumber" hidden></p>
+      <p>Original</p>
+      <p id="lineDisplay" style="font-size: 30px; font-family:'Trebuchet MS'"></p>
+      <p>Translation</p>
+      <p id="english" style="font-size: 20px;"></p>
+    </div>
+
+    <div class="controls">
+      <button id=yes>Yes</button>
+      <!-- <button id="playFiles">Play</button> -->
+      <audio class="audio" id="playFiles" controls></audio>
+      <button id=no>No</button>
+    </div>
+    <button id="next">NEXT</button>
+
+
+  </body>
+</html>
