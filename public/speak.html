@@ -8,6 +8,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+      <link rel="stylesheet" href="css/modal.css" />
     
       <style>
         .body {
@@ -43,11 +44,29 @@
       <button id="record"><i style="font-size:24px" class="fa">&#xf130;</i></button>
       <button id="stop"><i style="font-size:24px" class="fa">&#xf28d;</i></button>
     </div>
-    <button id="submit"><i style="font-size:17px" class="fa">&#xf1d9;</i> Submit </button>
+    <button id="submit" class="modal-toggle"><i style="font-size:17px" class="fa">&#xf1d9;</i> Submit </button>
     <audio class="audio" id="audio" controls></audio>
+
+    <div class="modal">
+      <div class="modal-overlay modal-toggle"></div>
+      <div class="modal-wrapper modal-transition">
+        <div class="modal-header">
+          <button class="modal-close modal-toggle"><svg class="icon-close icon" viewBox="0 0 32 32"><use xlink:href="#icon-close"></use></svg></button>
+          <h1 class="modal-heading">Recording successful!</h1>
+        </div>
+        
+        <div class="modal-body">
+          <div class="modal-content">
+            <p>Thank you for your donation to our database.</p>
+            <button class="home" onclick="index.html">Home</button>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <script src="./scripts/p5.min.js"></script>
     <script src="./scripts/recorder.js"></script>
     <script src="./scripts/sentence.js"></script>
+    <script src="js/modal.js"></script>
   </body>
 </html>
