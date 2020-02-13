@@ -1,3 +1,4 @@
 node_modules/
 myDir/
 public/uploads/*
+!public/uploads/.keep
