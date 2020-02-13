@@ -9,6 +9,7 @@
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
       <link rel="stylesheet" href="css/modal.css" />
+      <link rel="stylesheet" href="css/navbar.css"/>
     
       <style>
         .body {
@@ -21,10 +22,17 @@
           background-repeat: no-repeat;
           background-size: 100%;
         }
+        .submit-home {
+          padding: 10px;
+        }
       </style>
   </head>
 
   <body class="body" onload="newSentence()">
+    <div class="navbar">
+      <a href="index.html"><i class="fa fa-arrow-left"></i> Home</a> 
+    </div>
+
       <div class="read">
         <h1 id="h2Text"> Click  <i style="font-size:24px" class="fa">&#xf130;</i>    
          then read the sentence aloud </h1> 
@@ -54,7 +62,7 @@
         <div class="modal-body">
           <div class="modal-content">
             <p>Thank you for your donation to our database.</p>
-            <button class="home" onclick="index.html">Home</button>
+            <a href="index.html"><button class="submit-home"><i class="fa fa-fw fa-home"></i> Home</button></a>
           </div>
         </div>
       </div>

@@ -5,6 +5,7 @@
   <script src="scripts/fileFetch.js"></script>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/navbar.css"/>
   <head>
     <style>
       .body {
@@ -75,7 +76,7 @@
         width: 150px;
         background-color: transparent;
         font-size: 25px;
-        margin-top: 370px;
+        margin-top: 500px;
         color:black;
       }
       .next:hover {
@@ -113,6 +114,10 @@
     <title>Listen Cebuano</title>
   </head>
   <body class="body">
+    <div class="navbar">
+      <a href="index.html"><i class="fa fa-arrow-left"></i> Home</a>  
+    </div>
+
     <div class="read">
       <h1 id="h2Text">Click <i class="fa fa-play-circle" style="font-size:28px"></i>    
         Did they accurately speak the sentence? </h1> 
@@ -125,7 +130,6 @@
       <p>Translation</p>
       <p id="english" style="font-size: 20px;"></p>
       <button id=yes class="btn"> <i class="fa fa-thumbs-o-up"></i> </button>
-      <!-- <button id="playFiles">Play</button> -->
       <audio class="audio" id="playFiles" controls></audio>
       <button id=no class="btn"> <i class="fa fa-thumbs-o-down"></i></button>
     </div>

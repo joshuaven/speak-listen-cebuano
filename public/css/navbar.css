@@ -1,0 +1,20 @@
+* {box-sizing: border-box}
+body {font-family: Arial, Helvetica, sans-serif;}
+
+.navbar {
+  background-color: transparent;
+  overflow: auto;
+}
+
+.navbar a {
+  float: left;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 17px;
+  width: 100%; /* Four links of equal widths */
+  text-align: left;
+}
+
+.navbar a:hover {
+  background-color: white;
+}
