@@ -1,0 +1,31 @@
+{"service":"speak-listen-cebuano","level":"info","message":"test message my string","timestamp":"2020-02-23 00:52:39"}
+undefined
+info: test message my string {"service":"speak-listen-cebuano","timestamp":"2020-02-23 00:54:24"}
+info: test message my string {"service":"speak-listen-cebuano","timestamp":"2020-02-23 01:02:02"}
+info: test message my string {"service":"speak-listen-cebuano","timestamp":"2020-02-23 01:02:38"}
+info: app listening to port 3000 {"timestamp":"2020-02-23 01:03:06"}
+error: app listening to port 3000 {"timestamp":"2020-02-23 01:04:19"}
+info: app listening to port 3000 {"timestamp":"2020-02-23 01:04:47"}
+info: app listening to port 3000 {"timestamp":"2020-02-23 01:07:05"}
+info: app listening to port 3000 {"timestamp":"2020-02-23 01:07:57"}
+info: fetching directory: [object Undefined] {"service":"speak-listen-cebuano","timestamp":"2020-02-23 01:08:00"}
+info: app listening to port 3000 {"timestamp":"2020-02-23 01:08:36"}
+info: fetching directory: [object Undefined] {"service":"speak-listen-cebuano","timestamp":"2020-02-23 01:08:38"}
+info: app listening to port 3000 {"timestamp":"2020-02-23 01:09:11"}
+info: fetching directory: C:\Users\Joshua Ven\Documents\GitHub\speak-listen-cebuano\public\uploads {"service":"speak-listen-cebuano","timestamp":"2020-02-23 01:09:13"}
+info: app listening to port 3000 {"timestamp":"2020-02-23 01:11:11"}
+info: fetching directory: ./public/upload {"service":"speak-listen-cebuano","timestamp":"2020-02-23 01:11:13"}
+info: app listening to port 3000 {"timestamp":"2020-02-23 01:11:48"}
+info: fetching directory: ./public/upload {"service":"speak-listen-cebuano","timestamp":"2020-02-23 01:11:50"}
+error: Error getting data from directory! {"service":"speak-listen-cebuano","timestamp":"2020-02-23 01:11:50","stack":"Error: Error getting data from directory!\n    at C:\\Users\\Joshua Ven\\Documents\\GitHub\\speak-listen-cebuano\\app.js:41:27\n    at FSReqCallback.oncomplete (fs.js:154:23)"}
+info: app listening to port 3000 {"timestamp":"2020-02-23 01:29:41"}
+info: Loading files in public folder {"service":"speak-listen-cebuano","timestamp":"2020-02-23 01:29:56"}
+info: Loading files in public folder {"service":"speak-listen-cebuano","timestamp":"2020-02-23 01:29:57"}
+info: Loading files in public folder {"service":"speak-listen-cebuano","timestamp":"2020-02-23 01:29:57"}
+info: Loading files in public folder {"service":"speak-listen-cebuano","timestamp":"2020-02-23 01:30:44"}
+info: Loading files in public folder {"service":"speak-listen-cebuano","timestamp":"2020-02-23 01:30:44"}
+info: Loading files in public folder {"service":"speak-listen-cebuano","timestamp":"2020-02-23 01:30:44"}
+info: Loading HTTP files in public folder {"service":"speak-listen-cebuano","timestamp":"2020-02-23 01:33:30"}
+info: app listening to port 3000 {"timestamp":"2020-02-23 01:33:30"}
+info: fetching directory: ./public/uploads {"service":"speak-listen-cebuano","timestamp":"2020-02-23 01:34:01"}
+info: Files loaded successfully! {"service":"speak-listen-cebuano","timestamp":"2020-02-23 01:34:01"}

@@ -1,0 +1,2 @@
+error: app listening to port 3000 {"timestamp":"2020-02-23 01:04:19"}
+error: Error getting data from directory! {"service":"speak-listen-cebuano","timestamp":"2020-02-23 01:11:50","stack":"Error: Error getting data from directory!\n    at C:\\Users\\Joshua Ven\\Documents\\GitHub\\speak-listen-cebuano\\app.js:41:27\n    at FSReqCallback.oncomplete (fs.js:154:23)"}
