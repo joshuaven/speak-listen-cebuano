@@ -1,0 +1,80 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:100,300,100italic,300italic");
+
+.phrases {
+    position: relative;
+    width: 45rem;
+    height: 20rem;
+    box-shadow: 0 0 2rem 0#e3e4e7;
+    background-color: rgba(201, 196, 196, 0.432);   
+    backdrop-filter: blur(15px);
+    text-align: center;
+    line-height: [heightofbox];
+    border-radius:10px;
+  }
+
+  .phrases {
+    margin: 0;
+    background-position: 100px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 30pt;
+    font-weight: 500;
+  }
+#skip{
+    height:30px; 
+    width:100px; 
+    margin: -20px -50px; 
+    position:relative;
+    font-weight: bolder;
+    margin-top: 10%;
+}
+#skip:hover {
+    background-color: #c6c7cf;
+}
+.audio {
+    margin: 0;
+    background-position: 100px;
+    position: absolute;
+    top: 80%;
+    left: 60%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+  }
+.controls {
+    margin: 0;
+    background-position: 100px;
+    position: absolute;
+    top: 80%;
+    left: 35%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+  }
+.read {
+    margin: 0;
+    background-position: 100px;
+    position: absolute;
+    top: 20%;
+    left: 30%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+  }
+#record, #stop, #submit {
+    margin-left: 5px;
+}
+
+#submit {
+    padding: 4px;
+    margin: 0;
+    background-position: 100px;
+    position: absolute;
+    top: 80%;
+    left: 41.5%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    border: rgb(141, 140, 140) 1px solid;
+  }
+

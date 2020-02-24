@@ -1,80 +1,76 @@
 <!DOCTYPE html>
 <html>
   <head>
-  <style>
-    .phrases {
-      height: 10em;
-      position: relative }
-    .phrases {
-      margin: 0;
-      background-position: 100px;
-      position: absolute;
-      top: 70%;
-      left: 50%;
-      margin-right: -50%;
-      transform: translate(-50%, -50%);
-      font-size: 40px; }
-    .button{
-      height:20px; 
-      width:100px; 
-      margin: -20px -50px; 
-      position:relative;
-      top:50%; 
-      left:50%;
-      font-weight: bolder;
-    }
-    .audio {
-      margin: 0;
-      background-position: 100px;
-      position: absolute;
-      top: 80%;
-      left: 65%;
-      margin-right: -50%;
-      transform: translate(-50%, -50%);
-    }
-    .controls {
-      margin: 0;
-      background-position: 100px;
-      position: absolute;
-      top: 80%;
-      left: 35%;
-      margin-right: -50%;
-      transform: translate(-50%, -50%);
-    }
-    .read {
-      margin: 0;
-      background-position: 100px;
-      position: absolute;
-      top: 20%;
-      left: 30%;
-      margin-right: -50%;
-      transform: translate(-50%, -50%);
-    }
-
-  </style>  
-
-    <title>Speak Cebuano</title>
+      <title>Speak Cebuano</title>
+      <link rel="stylesheet" href="css/speak.css" />
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+      <link rel="stylesheet" href="css/modal.css" />
+      <link rel="stylesheet" href="css/navbar.css"/>
+    
+      <style>
+        .body {
+          /* height: "100%";
+          width: "100%"; */
+          /* flex-direction: row-reverse;
+          background-color: aquamarine; */
+          text-align: center;
+          background-image: url("images/listen4.jpeg");
+          background-repeat: no-repeat;
+          background-size: 100%;
+        }
+        .submit-home {
+          padding: 10px;
+        }
+      </style>
   </head>
-  <body onload="newSentence()">
-    <div class="read">
-      <h2>Click start then read the sentence aloud!</h2>
+
+  <body class="body" onload="newSentence()">
+    <div class="navbar">
+      <a href="index.html"><i class="fa fa-arrow-left"></i> Home</a> 
     </div>
+
+      <div class="read">
+        <h1 id="h2Text"> Click  <i style="font-size:24px" class="fa">&#xf130;</i>    
+         then read the sentence aloud </h1> 
+      </div>
     <div class="phrases">
       <p id="lineNumber" hidden></p>
       <p id="lineDisplay"></p>
       <p id="english" style="font-size: 20px;"></p>
-      <button class="button" onclick="newSentence()">Skip</button>
+      <button id="skip" onclick="newSentence()">Skip</button>
     </div>
 
     <div class="controls">
-      <button id="record" style="border: 2px solid #4CAF50;">START</button>
-      <button id="stop" style="border: 2px solid #F44336;">STOP</button>
-      <button id="submit">Submit</button>
+      <button id="record"><i style="font-size:24px" class="fa">&#xf130;</i></button>
+      <button id="stop"><i style="font-size:24px" class="fa">&#xf28d;</i></button>
     </div>
+    <button id="submit" class="modal-toggle"><i style="font-size:17px" class="fa">&#xf1d9;</i> Submit </button>
     <audio class="audio" id="audio" controls></audio>
+
+    <div class="modal">
+      <div class="modal-overlay modal-toggle"></div>
+      <div class="modal-wrapper modal-transition">
+        <div class="modal-header">
+          <button class="modal-close modal-toggle"><svg class="icon-close icon" viewBox="0 0 32 32"><use xlink:href="#icon-close"></use></svg></button>
+          <h1 class="modal-heading">Recording successful!</h1>
+        </div>
+        
+        <div class="modal-body">
+          <div class="modal-content">
+            <p>Thank you for your donation to our database.</p>
+            <a href="index.html"><button class="submit-home"><i class="fa fa-fw fa-home"></i> Home</button></a>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <script src="./scripts/p5.min.js"></script>
     <script src="./scripts/recorder.js"></script>
     <script src="./scripts/sentence.js"></script>
+    <script src="js/modal.js"></script>
   </body>
 </html>
