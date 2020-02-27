@@ -15,6 +15,7 @@ let URL;
 
 //form submission
 let p5Mods;
+let logToServer;
 
 //audio title
 let lineNumber;
@@ -28,7 +29,7 @@ submitButton.addEventListener("click", () => {
   formdata.append("soundBlob", blob, title + ".wav");
   console.log(formdata);
 
-  var serverURL = "/upload";
+  var serverURL = "/uploadToServer";
 
   var httpRequestOption = {
     method: "POST",
@@ -42,16 +43,16 @@ submitButton.addEventListener("click", () => {
     serverURL,
     httpRequestOption,
     successStatusCode => {
-      console.log("Uploaded recording successfully: " + successStatusCode);
+      console.log(successStatusCode)
     },
     error => {
-      console.log(error);
+      console.log(error)
     }
   );
   submitButton.disabled = true;
 });
 
-stopButton.addEventListener("click", function() {
+stopButton.addEventListener("click", function () {
   stopRecording();
   audioRecord.src = url;
   console.log(audioRecord);
@@ -68,7 +69,9 @@ function handleDataAvailable(event) {
 }
 
 function startRecording() {
-  console.log("Started Recording");
+  fetch('/StartRecord').then(() => {
+    console.log("Started Recording");
+  })
 
   recordedBlobs = [];
   let options = {
@@ -76,13 +79,13 @@ function startRecording() {
   };
 
   if (!MediaRecorder.isTypeSupported(options.mimeType)) {
-    console.error(options.mimeType + "is not supported");
+    fetch('/MediaRecordUnsupported').then(() => console.error(options.mimeType + "is not supported"))
   }
 
   try {
     mediaRecorder = new MediaRecorder(window.stream, options);
   } catch (error) {
-    console.error("Exception while trying to create MediaRecorder: ", error);
+    fetch('/ErrorMediaCreation').then(() => console.error("Exception while trying to create MediaRecorder: ", error))
     return;
   }
 
@@ -90,13 +93,17 @@ function startRecording() {
   recordButton.disabled = true;
 
   mediaRecorder.onStop = event => {
-    console.log("Recorder stopped: ", event);
-    console.log("Recorded Blobs: ", recordedBlobs);
+    fetch('/MediaRecordStop').then(() => {
+      console.log("Recorder stopped: ", event);
+      console.log("Recorded Blobs: ", recordedBlobs);
+    })
   };
 
   mediaRecorder.ondataavailable = handleDataAvailable;
   mediaRecorder.start(10);
-  console.log("MediaRecorder started", mediaRecorder);
+  fetch('/MediaRecordStart').then(() => {
+    console.log("MediaRecorder started", mediaRecorder);
+  })
   stopButton.disabled = false;
 }
 
@@ -112,11 +119,13 @@ function stopRecording() {
   submitButton.disabled = false;
 }
 
-const handleSuccess = function(stream) {
+const handleSuccess = function (stream) {
   newSentence();
   recordButton.disabled = false;
   window.stream = stream;
-  console.log("getUserMedia() got stream", stream);
+  fetch('/MicAllowed').then(() => {
+    console.log("getUserMedia() got stream", stream);
+  })
 };
 
 function handleError(error) {
@@ -125,6 +134,8 @@ function handleError(error) {
     error.message,
     error.name
   );
+
+  fetch('/MicError').then
 }
 
 navigator.mediaDevices

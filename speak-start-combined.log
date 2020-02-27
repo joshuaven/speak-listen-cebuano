@@ -1,0 +1,31 @@
+info: Initialized speak service {"service":"speak-service","timestamp":"2020-02-26 22:45:28"}
+info: Microphone allowed by the user {"service":"speak-service","timestamp":"2020-02-26 22:45:32"}
+info: Microphone started recording {"service":"speak-service","timestamp":"2020-02-26 22:45:36"}
+info: Media Recording Started {"service":"speak-service","timestamp":"2020-02-26 22:45:37"}
+info: Initialized speak service {"service":"speak-service","timestamp":"2020-02-26 22:48:44"}
+info: Microphone allowed by the user {"service":"speak-service","timestamp":"2020-02-26 22:48:46"}
+info: Microphone started recording {"service":"speak-service","timestamp":"2020-02-26 22:48:51"}
+info: Media Recording Started {"service":"speak-service","timestamp":"2020-02-26 22:48:51"}
+error: An error occured while uploading the file {"service":"speak-service","timestamp":"2020-02-26 22:49:02"}
+info: Initialized speak service {"service":"speak-service","timestamp":"2020-02-26 22:53:19"}
+info: Microphone allowed by the user {"service":"speak-service","timestamp":"2020-02-26 22:53:21"}
+info: Microphone started recording {"service":"speak-service","timestamp":"2020-02-26 22:53:28"}
+info: Media Recording Started {"service":"speak-service","timestamp":"2020-02-26 22:53:28"}
+error: An error occured while uploading the file {"service":"speak-service","timestamp":"2020-02-26 22:53:35"}
+info: Initialized speak service {"service":"speak-service","timestamp":"2020-02-26 22:56:47"}
+info: Microphone allowed by the user {"service":"speak-service","timestamp":"2020-02-26 22:56:50"}
+info: Microphone started recording {"service":"speak-service","timestamp":"2020-02-26 22:56:52"}
+info: Media Recording Started {"service":"speak-service","timestamp":"2020-02-26 22:56:52"}
+info: Initialized speak service {"service":"speak-service","timestamp":"2020-02-26 22:58:05"}
+info: Microphone allowed by the user {"service":"speak-service","timestamp":"2020-02-26 22:58:06"}
+info: Microphone started recording {"service":"speak-service","timestamp":"2020-02-26 22:58:08"}
+info: Media Recording Started {"service":"speak-service","timestamp":"2020-02-26 22:58:08"}
+info: Initialized speak service {"service":"speak-service","timestamp":"2020-02-26 23:00:50"}
+info: Initialized speak service {"service":"speak-service","timestamp":"2020-02-26 23:00:52"}
+info: Microphone allowed by the user {"service":"speak-service","timestamp":"2020-02-26 23:00:54"}
+info: Microphone started recording {"service":"speak-service","timestamp":"2020-02-26 23:00:56"}
+info: Media Recording Started {"service":"speak-service","timestamp":"2020-02-26 23:00:56"}
+info: Initialized speak service {"service":"speak-service","timestamp":"2020-02-26 23:01:14"}
+info: Microphone allowed by the user {"service":"speak-service","timestamp":"2020-02-26 23:01:15"}
+info: Microphone started recording {"service":"speak-service","timestamp":"2020-02-26 23:01:17"}
+info: Media Recording Started {"service":"speak-service","timestamp":"2020-02-26 23:01:17"}

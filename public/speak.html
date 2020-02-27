@@ -1,76 +1,82 @@
 <!DOCTYPE html>
 <html>
-  <head>
-      <title>Speak Cebuano</title>
-      <link rel="stylesheet" href="css/speak.css" />
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-      <link rel="stylesheet" href="css/modal.css" />
-      <link rel="stylesheet" href="css/navbar.css"/>
-    
-      <style>
-        .body {
-          /* height: "100%";
+
+<head>
+  <title>Speak Cebuano</title>
+  <link rel="stylesheet" href="css/speak.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="css/modal.css" />
+  <link rel="stylesheet" href="css/navbar.css" />
+
+  <style>
+    .body {
+      /* height: "100%";
           width: "100%"; */
-          /* flex-direction: row-reverse;
+      /* flex-direction: row-reverse;
           background-color: aquamarine; */
-          text-align: center;
-          background-image: url("images/listen4.jpeg");
-          background-repeat: no-repeat;
-          background-size: 100%;
-        }
-        .submit-home {
-          padding: 10px;
-        }
-      </style>
-  </head>
+      text-align: center;
+      background-image: url("images/listen4.jpeg");
+      background-repeat: no-repeat;
+      background-size: 100%;
+    }
 
-  <body class="body" onload="newSentence()">
-    <div class="navbar">
-      <a href="index.html"><i class="fa fa-arrow-left"></i> Home</a> 
-    </div>
+    .submit-home {
+      padding: 10px;
+    }
+  </style>
+</head>
 
-      <div class="read">
-        <h1 id="h2Text"> Click  <i style="font-size:24px" class="fa">&#xf130;</i>    
-         then read the sentence aloud </h1> 
+<body class="body" onload="newSentence(); logSpeak()">
+  <div class="navbar">
+    <a href="index.html"><i class="fa fa-arrow-left"></i> Home</a>
+  </div>
+
+  <div class="read">
+    <h1 id="h2Text"> Click <i style="font-size:24px" class="fa">&#xf130;</i>
+      then read the sentence aloud </h1>
+  </div>
+  <div class="phrases">
+    <p id="lineNumber" hidden></p>
+    <p id="lineDisplay"></p>
+    <p id="english" style="font-size: 20px;"></p>
+    <button id="skip" onclick="newSentence()">Skip</button>
+  </div>
+
+  <div class="controls">
+    <button id="record"><i style="font-size:24px" class="fa">&#xf130;</i></button>
+    <button id="stop"><i style="font-size:24px" class="fa">&#xf28d;</i></button>
+  </div>
+  <button id="submit" class="modal-toggle"><i style="font-size:17px" class="fa">&#xf1d9;</i> Submit </button>
+  <audio class="audio" id="audio" controls></audio>
+
+  <div class="modal">
+    <div class="modal-overlay modal-toggle"></div>
+    <div class="modal-wrapper modal-transition">
+      <div class="modal-header">
+        <button class="modal-close modal-toggle"><svg class="icon-close icon" viewBox="0 0 32 32">
+            <use xlink:href="#icon-close"></use>
+          </svg></button>
+        <h1 class="modal-heading">Recording successful!</h1>
       </div>
-    <div class="phrases">
-      <p id="lineNumber" hidden></p>
-      <p id="lineDisplay"></p>
-      <p id="english" style="font-size: 20px;"></p>
-      <button id="skip" onclick="newSentence()">Skip</button>
-    </div>
 
-    <div class="controls">
-      <button id="record"><i style="font-size:24px" class="fa">&#xf130;</i></button>
-      <button id="stop"><i style="font-size:24px" class="fa">&#xf28d;</i></button>
-    </div>
-    <button id="submit" class="modal-toggle"><i style="font-size:17px" class="fa">&#xf1d9;</i> Submit </button>
-    <audio class="audio" id="audio" controls></audio>
-
-    <div class="modal">
-      <div class="modal-overlay modal-toggle"></div>
-      <div class="modal-wrapper modal-transition">
-        <div class="modal-header">
-          <button class="modal-close modal-toggle"><svg class="icon-close icon" viewBox="0 0 32 32"><use xlink:href="#icon-close"></use></svg></button>
-          <h1 class="modal-heading">Recording successful!</h1>
-        </div>
-        
-        <div class="modal-body">
-          <div class="modal-content">
-            <p>Thank you for your donation to our database.</p>
-            <a href="index.html"><button class="submit-home"><i class="fa fa-fw fa-home"></i> Home</button></a>
-          </div>
+      <div class="modal-body">
+        <div class="modal-content">
+          <p>Thank you for your donation to our database.</p>
+          <a href="index.html"><button class="submit-home"><i class="fa fa-fw fa-home"></i> Home</button></a>
         </div>
       </div>
     </div>
+  </div>
 
-    <script src="./scripts/p5.min.js"></script>
-    <script src="./scripts/recorder.js"></script>
-    <script src="./scripts/sentence.js"></script>
-    <script src="js/modal.js"></script>
-  </body>
+  <script src="./scripts/p5.min.js"></script>
+  <script src="./scripts/recorder.js"></script>
+  <script src="./scripts/sentence.js"></script>
+  <script src="js/modal.js"></script>
+  <script src="./scripts/speak.js"></script>
+</body>
+
 </html>

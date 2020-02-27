@@ -1,27 +1,31 @@
 <!DOCTYPE html>
+
 </html>
-  <script src="scripts/sentence.js"></script>
-  <script src="scripts/p5.min.js"></script>
-  <script src="scripts/fileFetch.js"></script>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link rel="stylesheet" href="css/navbar.css"/>
-  <head>
-    <style>
-      .body {
-        /* height: "100%";
+<script src="scripts/sentence.js"></script>
+<script src="scripts/p5.min.js"></script>
+<script src="scripts/fileFetch.js"></script>
+<script src="scripts/listen.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="css/navbar.css" />
+
+<head>
+  <style>
+    .body {
+      /* height: "100%";
         width: "100%"; */
-        /* flex-direction: row-reverse;
+      /* flex-direction: row-reverse;
         background-color: aquamarine; */
-        text-align: center;
-        background-image: url("images/listen1.jpeg");
-        background-repeat: no-repeat; 
-        background-size: 100%;
-      } 
-      /* .phrases {
+      text-align: center;
+      background-image: url("images/listen1.jpeg");
+      background-repeat: no-repeat;
+      background-size: 100%;
+    }
+
+    /* .phrases {
         height: 10em;
         position: relative } */
-      /*.phrases {
+    /*.phrases {
       }
        .button{
         height:20px;
@@ -49,92 +53,100 @@
         left: 35%;
         margin-right: -50%;
         transform: translate(-50%, -50%);
-      } */ */
-      .read {
-        text-align: center;
-      }
+      } */
+    */ .read {
+      text-align: center;
+    }
 
-      #h2Text {
-        font-size: 30px;
-        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-        margin-top: 115px;
-        color: black;
-        margin-left: -400px;
-      }
-      .btn {
-        background-color: transparent;
-        border: none;
-        padding-bottom: 10px;
-        font-size: 55px;
-      }
-      .btn:hover {
-        background-color: white;
-      }
-      .next {
-        border: 3px;
-        padding: 10px;
-        width: 150px;
-        background-color: transparent;
-        font-size: 25px;
-        margin-top: 500px;
-        color:black;
-      }
-      .next:hover {
-        background-color: white;
-      }
-      .phrases {
-        position: relative;
-        width: 45rem;
-        height: 20rem;
-        box-shadow: 0 0 2rem 0#e3e4e7;
-        background-color: rgba(201, 196, 196, 0.432);   
-        backdrop-filter: blur(15px);
-        text-align: center;
-        line-height: [heightofbox];
-        border-radius:10px;
-      }
+    #h2Text {
+      font-size: 30px;
+      font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+      margin-top: 115px;
+      color: black;
+      margin-left: -400px;
+    }
 
-      .phrases {
-        margin: 0;
-        background-position: 100px;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        margin-right: -50%;
-        transform: translate(-50%, -50%);
-        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-	      font-size: 20pt;
-        font-weight: 500;
-      }
-      .audio {
-        margin-top: 10%;
-      }
-    </style>
+    .btn {
+      background-color: transparent;
+      border: none;
+      padding-bottom: 10px;
+      font-size: 55px;
+    }
 
-    <title>Listen Cebuano</title>
-  </head>
-  <body class="body">
-    <div class="navbar">
-      <a href="index.html"><i class="fa fa-arrow-left"></i> Home</a>  
-    </div>
+    .btn:hover {
+      background-color: white;
+    }
 
-    <div class="read">
-      <h1 id="h2Text">Click <i class="fa fa-play-circle" style="font-size:28px"></i>    
-        Did they accurately speak the sentence? </h1> 
-    </div>
+    .next {
+      border: 3px;
+      padding: 10px;
+      width: 150px;
+      background-color: transparent;
+      font-size: 25px;
+      margin-top: 500px;
+      color: black;
+    }
 
-    <div class="phrases">
-      <p id="lineNumber" hidden></p>
-      <p>Original</p>
-      <p id="lineDisplay" style="font-size: 30px; font-family:'Trebuchet MS'"></p>
-      <p>Translation</p>
-      <p id="english" style="font-size: 20px;"></p>
-      <button id=yes class="btn"> <i class="fa fa-thumbs-o-up"></i> </button>
-      <audio class="audio" id="playFiles" controls></audio>
-      <button id=no class="btn"> <i class="fa fa-thumbs-o-down"></i></button>
-    </div>
-    <button id="next" class="next">NEXT <i class="fa fa-arrow-right" ></i> </button>
+    .next:hover {
+      background-color: white;
+    }
+
+    .phrases {
+      position: relative;
+      width: 45rem;
+      height: 20rem;
+      box-shadow: 0 0 2rem 0#e3e4e7;
+      background-color: rgba(201, 196, 196, 0.432);
+      backdrop-filter: blur(15px);
+      text-align: center;
+      line-height: [heightofbox];
+      border-radius: 10px;
+    }
+
+    .phrases {
+      margin: 0;
+      background-position: 100px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      margin-right: -50%;
+      transform: translate(-50%, -50%);
+      font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+      font-size: 20pt;
+      font-weight: 500;
+    }
+
+    .audio {
+      margin-top: 10%;
+    }
+  </style>
+
+  <title>Listen Cebuano</title>
+</head>
+
+<body id='listenbody' onload="logListen()" class="body">
+  <div class="navbar">
+    <a href="index.html"><i class="fa fa-arrow-left"></i> Home</a>
+  </div>
+
+  <div class="read">
+    <h1 id="h2Text">Click <i class="fa fa-play-circle" style="font-size:28px"></i>
+      Did they accurately speak the sentence? </h1>
+  </div>
+
+  <div class="phrases">
+    <p id="lineNumber" hidden></p>
+    <p>Original</p>
+    <p id="lineDisplay" style="font-size: 30px; font-family:'Trebuchet MS'"></p>
+    <p>Translation</p>
+    <p id="english" style="font-size: 20px;"></p>
+    <button id=yes class="btn"> <i class="fa fa-thumbs-o-up"></i> </button>
+    <audio class="audio" id="playFiles" controls></audio>
+    <button id=no class="btn"> <i class="fa fa-thumbs-o-down"></i></button>
+  </div>
+  <button id="next" class="next">NEXT <i class="fa fa-arrow-right"></i> </button>
 
 
-  </body>
+</body>
+
 </html>
