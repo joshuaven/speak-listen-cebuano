@@ -1,4 +1,4 @@
-var sentences = [
+var cebuano = [
   "Maka-istorya ba ka og English?",
   "Asa dapit ang Ayala dire?",
   "Unsa ang jeep sakyan padung sa pier?",
@@ -12,9 +12,12 @@ var sentences = [
 ];
 
 function displaySentence(lineNumber) {
-  document.getElementById("lineDisplay").innerHTML = sentences[lineNumber];
+  document.getElementById("lineDisplay").innerHTML = cebuano[lineNumber];
   document.getElementById("english").innerHTML = english[lineNumber];
-  console.log(sentences[lineNumber]);
+  return {
+    cebuano: cebuano[lineNumber],
+    english: english[lineNumber]
+  }
 }
 var english = [
   "Can you speak in English?",
@@ -30,8 +33,8 @@ var english = [
 ];
 
 function newSentence() {
-  var randomNumber = Math.floor(Math.random() * sentences.length);
-  document.getElementById("lineDisplay").innerHTML = sentences[randomNumber];
+  var randomNumber = Math.floor(Math.random() * cebuano.length);
+  document.getElementById("lineDisplay").innerHTML = cebuano[randomNumber];
   document.getElementById("lineNumber").innerHTML = randomNumber;
   document.getElementById("english").innerHTML =
     "Translation: " + english[randomNumber];

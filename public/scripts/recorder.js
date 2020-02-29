@@ -64,6 +64,8 @@ submitButton.addEventListener("click", () => {
     }
   );
   submitButton.disabled = true;
+
+  logToServer("info", "User exits on this service")
 });
 
 stopButton.addEventListener("click", function () {

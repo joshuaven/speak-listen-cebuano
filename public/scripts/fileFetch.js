@@ -4,7 +4,22 @@ httpOption = {
 };
 
 let data;
-const fetchURL = "/listFiles";
+const fetchURL = "listen/listFiles";
+
+// logging
+let logToServer = (logType, logMessage) => {
+  myheaders = new Headers();
+  myheaders.append('logType', logType);
+  myheaders.append('logMessage', logMessage);
+  // console.log(myheaders.get('logMessage'));
+  fetch(
+    '/listen/log',
+    {
+      method: "POST",
+      headers: myheaders,
+    }
+  )
+}
 
 data = new Promise((resolve, reject) => {
   new p5.prototype.httpDo(
@@ -12,7 +27,6 @@ data = new Promise((resolve, reject) => {
     httpOption,
     successData => {
       resolve(successData);
-      console.log(data);
     },
     error => {
       reject(error);
@@ -20,8 +34,10 @@ data = new Promise((resolve, reject) => {
   ).then(data => {
     const parsedData = JSON.parse(data);
     if (parsedData) {
-      fetch("/filesFetchedSucc");
+      logToServer("info", "Filenames loaded to client")
     }
+
+    parsedData.splice(0, 1)
 
     const nextButton = document.getElementById("next");
     const player = document.getElementById("playFiles");
@@ -33,7 +49,9 @@ data = new Promise((resolve, reject) => {
     sentence = sentenceNumber;
     console.log(player.src);
 
-    displaySentence(sentenceNumber);
+    let { cebuano } = displaySentence(sentenceNumber)
+
+    logToServer("info", "Sentence loaded: " + cebuano)
 
     nextButton.addEventListener("click", () => {
       if (track < parsedData.length - 1) {
@@ -45,7 +63,10 @@ data = new Promise((resolve, reject) => {
       player.src = "uploads/" + parsedData[track];
       sentenceNumber = parseInt(parsedData[track].slice(0, 1));
       document.getElementById("lineNumber").innerHTML = sentenceNumber;
-      displaySentence(sentenceNumber);
+
+      let { cebuano } = displaySentence(sentenceNumber)
+
+      logToServer("info", "Sentence loaded: " + cebuano)
     });
   });
 });
