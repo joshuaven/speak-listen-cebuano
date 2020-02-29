@@ -1,0 +1,7 @@
+error: 500 res.send is not a function {"service":"General-Service","timestamp":"2020-02-29 21:15:51"}
+error: 500 ENOENT: no such file or directory, open 'C:\Users\Joshua Ven\Documents\GitHub\speak-listen-cebuano\api/public/uploads/4-1582982255294.wav' {"service":"General-Service","timestamp":"2020-02-29 21:17:43"}
+error: 500 ENOENT: no such file or directory, open 'C:\Users\Joshua Ven\Documents\GitHub\speak-listen-cebuano\api/public/uploads/0-1582982441791.wav' {"service":"General-Service","timestamp":"2020-02-29 21:20:48"}
+error: 500 ENOENT: no such file or directory, open 'C:\Users\Joshua Ven\Documents\GitHub\speak-listen-cebuano\api../public/uploads/4-1582982522082.wav' {"service":"General-Service","timestamp":"2020-02-29 21:22:08"}
+error: 500 err is not defined {"service":"General-Service","timestamp":"2020-02-29 21:24:24"}
+error: 500 Unexpected token o in JSON at position 1 {"service":"General-Service","timestamp":"2020-02-29 22:04:47"}
+error: 500 speakLogger is not a function {"service":"General-Service","timestamp":"2020-02-29 22:25:17"}
