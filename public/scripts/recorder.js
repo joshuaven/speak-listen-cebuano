@@ -43,10 +43,10 @@ submitButton.addEventListener("click", () => {
     serverURL,
     httpRequestOption,
     successStatusCode => {
-      console.log(successStatusCode)
+      console.log(successStatusCode);
     },
     error => {
-      console.log(error)
+      console.log(error);
     }
   );
   submitButton.disabled = true;
@@ -69,9 +69,9 @@ function handleDataAvailable(event) {
 }
 
 function startRecording() {
-  fetch('/StartRecord').then(() => {
+  fetch("/StartRecord").then(() => {
     console.log("Started Recording");
-  })
+  });
 
   recordedBlobs = [];
   let options = {
@@ -79,13 +79,17 @@ function startRecording() {
   };
 
   if (!MediaRecorder.isTypeSupported(options.mimeType)) {
-    fetch('/MediaRecordUnsupported').then(() => console.error(options.mimeType + "is not supported"))
+    fetch("/MediaRecordUnsupported").then(() =>
+      console.error(options.mimeType + "is not supported")
+    );
   }
 
   try {
     mediaRecorder = new MediaRecorder(window.stream, options);
   } catch (error) {
-    fetch('/ErrorMediaCreation').then(() => console.error("Exception while trying to create MediaRecorder: ", error))
+    fetch("/ErrorMediaCreation").then(() =>
+      console.error("Exception while trying to create MediaRecorder: ", error)
+    );
     return;
   }
 
@@ -93,17 +97,17 @@ function startRecording() {
   recordButton.disabled = true;
 
   mediaRecorder.onStop = event => {
-    fetch('/MediaRecordStop').then(() => {
+    fetch("/MediaRecordStop").then(() => {
       console.log("Recorder stopped: ", event);
       console.log("Recorded Blobs: ", recordedBlobs);
-    })
+    });
   };
 
   mediaRecorder.ondataavailable = handleDataAvailable;
   mediaRecorder.start(10);
-  fetch('/MediaRecordStart').then(() => {
+  fetch("/MediaRecordStart").then(() => {
     console.log("MediaRecorder started", mediaRecorder);
-  })
+  });
   stopButton.disabled = false;
 }
 
@@ -123,9 +127,9 @@ const handleSuccess = function (stream) {
   newSentence();
   recordButton.disabled = false;
   window.stream = stream;
-  fetch('/MicAllowed').then(() => {
+  fetch("/MicAllowed").then(() => {
     console.log("getUserMedia() got stream", stream);
-  })
+  });
 };
 
 function handleError(error) {
@@ -135,7 +139,7 @@ function handleError(error) {
     error.name
   );
 
-  fetch('/MicError')
+  fetch("/MicError");
 }
 
 navigator.mediaDevices

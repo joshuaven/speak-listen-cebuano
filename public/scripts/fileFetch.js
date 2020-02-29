@@ -19,6 +19,9 @@ data = new Promise((resolve, reject) => {
     }
   ).then(data => {
     const parsedData = JSON.parse(data);
+    if (parsedData) {
+      fetch("/filesFetchedSucc");
+    }
 
     const nextButton = document.getElementById("next");
     const player = document.getElementById("playFiles");
