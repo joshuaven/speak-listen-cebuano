@@ -135,7 +135,7 @@ function handleError(error) {
     error.name
   );
 
-  fetch('/MicError').then
+  fetch('/MicError')
 }
 
 navigator.mediaDevices
