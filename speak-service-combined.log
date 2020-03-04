@@ -5,3 +5,9 @@ info: Mic allowed by the user {"timestamp":"2020-02-29 22:39:26"}
 info: Started Recording {"timestamp":"2020-02-29 22:39:30"}
 info: Media recorder started {"timestamp":"2020-02-29 22:39:30"}
 info: Media recorder stopped {"timestamp":"2020-02-29 22:39:33"}
+info: Mic allowed by the user {"timestamp":"2020-03-02 11:16:13"}
+info: Started Recording {"timestamp":"2020-03-02 11:16:16"}
+info: Media recorder started {"timestamp":"2020-03-02 11:16:16"}
+info: Media recorder stopped {"timestamp":"2020-03-02 11:16:20"}
+info: Audio file added to server {"service":"Speak-Service","timestamp":"2020-03-02 11:16:22"}
+info: User exits on this service {"timestamp":"2020-03-02 11:16:22"}

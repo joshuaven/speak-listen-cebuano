@@ -88,3 +88,26 @@ info: Files loaded successfully! {"service":"Listen-Service","timestamp":"2020-0
 info: Accessing listen service {"timestamp":"2020-02-29 23:48:40"}
 info: Filenames loaded to client {"timestamp":"2020-02-29 23:48:40"}
 info: Sentence loaded: Unsa ang jeep sakyan padung sa pier? {"timestamp":"2020-02-29 23:48:40"}
+info: fetching directory: ./public/uploads {"service":"Listen-Service","timestamp":"2020-03-02 11:17:19"}
+info: Files loaded successfully! {"service":"Listen-Service","timestamp":"2020-03-02 11:17:19"}
+info: Accessing listen service {"timestamp":"2020-03-02 11:17:20"}
+info: Filenames loaded to client {"timestamp":"2020-03-02 11:17:20"}
+info: Sentence loaded: Asa dapit ang Ayala dire? {"timestamp":"2020-03-02 11:17:20"}
+info: Sentence loaded: Mangaon ta ninyo! {"timestamp":"2020-03-02 11:17:27"}
+info: Sentence loaded: Asa dapit ang Ayala dire? {"timestamp":"2020-03-02 11:17:32"}
+info: Sentence loaded: Mangaon ta ninyo! {"timestamp":"2020-03-02 11:17:33"}
+info: Sentence loaded: Asa dapit ang Ayala dire? {"timestamp":"2020-03-02 11:17:34"}
+info: Sentence loaded: Mangaon ta ninyo! {"timestamp":"2020-03-02 11:17:34"}
+info: Sentence loaded: Asa dapit ang Ayala dire? {"timestamp":"2020-03-02 11:17:34"}
+info: Sentence loaded: Mangaon ta ninyo! {"timestamp":"2020-03-02 11:17:35"}
+info: Sentence loaded: Asa dapit ang Ayala dire? {"timestamp":"2020-03-02 11:17:35"}
+info: Sentence loaded: Mangaon ta ninyo! {"timestamp":"2020-03-02 11:17:35"}
+info: Sentence loaded: Asa dapit ang Ayala dire? {"timestamp":"2020-03-02 11:17:36"}
+info: Sentence loaded: Mangaon ta ninyo! {"timestamp":"2020-03-02 11:17:36"}
+info: Sentence loaded: Asa dapit ang Ayala dire? {"timestamp":"2020-03-02 11:17:36"}
+info: fetching directory: ./public/uploads {"service":"Listen-Service","timestamp":"2020-03-02 11:23:33"}
+info: Files loaded successfully! {"service":"Listen-Service","timestamp":"2020-03-02 11:23:33"}
+info: Accessing listen service {"timestamp":"2020-03-02 11:23:33"}
+info: Filenames loaded to client {"timestamp":"2020-03-02 11:23:33"}
+info: Sentence loaded: Asa dapit ang Ayala dire? {"timestamp":"2020-03-02 11:23:33"}
+info: Sentence loaded: Mangaon ta ninyo! {"timestamp":"2020-03-02 11:23:39"}
